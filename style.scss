@@ -1,0 +1,71 @@
+@import "null.scss";
+body{
+    padding: 50px;
+    color: white;
+    font-size: 27px;
+}
+.govno{padding: 50px;
+    border: 4px black solid;
+    width: 1000px;
+    height: 700px;
+    .flexFor2parts{display: flex;
+        align-items: center;
+        
+
+        .flexForBigSquare{
+            .bigSquare{width: 200px;
+                height: 200px;
+                border:2px solid black;
+                margin: 10px;
+                background: rgb(80, 57, 214);
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+
+            }
+            .Up{display: flex;
+
+            }
+            .Down{display: flex;
+
+            }
+        }
+        .flexForSmallSquare{align-items: flex-end;
+            justify-content: space-between;
+            //border: 2px solid black;
+            width: 400px;
+            height: 440px;
+            
+            .smallSquare{background: rgb(80, 57, 214);
+                height: 111px;
+                width: 111px;
+                margin: 5px;
+                border: 2px solid black;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+            }
+            .Up{display: flex;
+                margin-top: 6px;
+                justify-content: space-between;
+                
+
+            }
+            .Middle{display: flex;
+                margin-top: 36px;
+                justify-content: space-between;
+                
+
+            }
+            .Down{display: flex;
+                margin-top: 32px;
+                justify-content: space-between;
+                
+
+            }
+
+
+        }
+    }
+    
+}
