@@ -76,13 +76,13 @@ body {
   font-size: 27px;
 }
 
-.govno {
+.container {
   padding: 50px;
   border: 4px black solid;
   width: 1000px;
   height: 700px;
 }
-.govno .flexFor2parts {
+.container .flexFor2parts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,7 +90,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.govno .flexFor2parts .flexForBigSquare .bigSquare {
+.container .flexFor2parts .flexForBigSquare .bigSquare {
   width: 200px;
   height: 200px;
   border: 2px solid black;
@@ -106,17 +106,17 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.govno .flexFor2parts .flexForBigSquare .Up {
+.container .flexFor2parts .flexForBigSquare .Up {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.govno .flexFor2parts .flexForBigSquare .Down {
+.container .flexFor2parts .flexForBigSquare .Down {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.govno .flexFor2parts .flexForSmallSquare {
+.container .flexFor2parts .flexForSmallSquare {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -126,7 +126,7 @@ body {
   width: 400px;
   height: 440px;
 }
-.govno .flexFor2parts .flexForSmallSquare .smallSquare {
+.container .flexFor2parts .flexForSmallSquare .smallSquare {
   background: rgb(80, 57, 214);
   height: 111px;
   width: 111px;
@@ -142,7 +142,7 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.govno .flexFor2parts .flexForSmallSquare .Up {
+.container .flexFor2parts .flexForSmallSquare .Up {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,7 +151,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.govno .flexFor2parts .flexForSmallSquare .Middle {
+.container .flexFor2parts .flexForSmallSquare .Middle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,7 +160,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.govno .flexFor2parts .flexForSmallSquare .Down {
+.container .flexFor2parts .flexForSmallSquare .Down {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
