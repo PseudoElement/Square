@@ -1,21 +1,31 @@
 @import "null.scss";
-body{
-    padding: 50px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+
+
+body {
+    //padding: 50px;
     color: white;
     font-size: 27px;
 }
-.container{padding: 50px;
-    border: 4px black solid;
-    width: 1000px;
-    height: 700px;
-    .flexFor2parts{display: flex;
-        align-items: center;
-        
 
-        .flexForBigSquare{
-            .bigSquare{width: 200px;
+.container {
+    padding: 50px;
+    border: 4px black solid;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+
+    .flexFor2parts {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+
+        .flexForBigSquare {
+            .bigSquare {
+                width: 200px;
                 height: 200px;
-                border:2px solid black;
+                border: 2px solid black;
                 margin: 10px;
                 background: rgb(80, 57, 214);
                 display: flex;
@@ -23,20 +33,27 @@ body{
                 justify-content: flex-end;
 
             }
-            .Up{display: flex;
+
+            .Up {
+                display: flex;
 
             }
-            .Down{display: flex;
+
+            .Down {
+                display: flex;
 
             }
         }
-        .flexForSmallSquare{align-items: flex-end;
+
+        .flexForSmallSquare {
+            align-items: flex-end;
             justify-content: space-between;
             //border: 2px solid black;
             width: 400px;
             height: 440px;
-            
-            .smallSquare{background: rgb(80, 57, 214);
+
+            .smallSquare {
+                background: rgb(80, 57, 214);
                 height: 111px;
                 width: 111px;
                 margin: 5px;
@@ -45,27 +62,177 @@ body{
                 align-items: flex-end;
                 justify-content: flex-end;
             }
-            .Up{display: flex;
+
+            .Up {
+                display: flex;
                 margin-top: 6px;
                 justify-content: space-between;
-                
+
 
             }
-            .Middle{display: flex;
+
+            .Middle {
+                display: flex;
                 margin-top: 36px;
                 justify-content: space-between;
-                
+
 
             }
-            .Down{display: flex;
+
+            .Down {
+                display: flex;
                 margin-top: 32px;
                 justify-content: space-between;
-                
+
 
             }
 
 
         }
+    }
+
+}
+
+.forms {
+
+    color: black;
+    margin: 0 auto;
+    max-width: 808px;
+    margin-top: 20px;
+
+    .firstForm {
+        background: #FBF7F6;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+
+        label {position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 16px;
+            line-height: 20px;
+            font-family: 'Montserrat';
+            font-weight: 400;
+            //background: #FBF7F6;
+        }
+
+        input {width: 100%;
+            border-bottom: 1px solid #371030;
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.04em;
+            color: #371030;
+            margin-bottom: 7%;
+            background: transparent;
+        }
+        .firstForm_wrapper {
+            display: flex;
+            @media screen and (max-width:500px){
+                flex-direction: column;
+                height: 700px;
+            }
+            .part {
+                padding: 30px;
+                flex: 1 1 50%;
+                display: flex;
+                flex-direction: column;
+                h1 {
+                    font-family: 'Montserrat';
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 18px;
+                    letter-spacing: 0.04em;
+                    color: #371030;
+                    margin-bottom: 7%;
+                }
+                form {
+                    display: flex;
+                    
+                    flex-direction: column;
+                    .name,.phone,.email,.comment,.submit{
+                        position: relative;
+                        margin-bottom: 3%;
+                        input{
+                            &:focus~label,
+                            &:not(:placeholder-shown).input:not(:focus)~label{
+                                top: -13px;
+                                transition: top .3s;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    .namePhone {display: flex;
+                        justify-content: space-between;
+                        input {
+                            max-width: 144px;
+                            
+                        }
+                        
+                    }
+                }
+                &.right {
+                    background: url(./img/cover9\ 1.png) no-repeat;
+                    background-size: 100% 100%;
+                    border-top-right-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                }
+            }
+        }
+    }
+}
+/*GRID*/
+.grid{height: 600px;
+    margin-top: 50px;
+    border: 2px solid red;
+    .grid_wrapper{
+        div{
+            border: 2px dashed black;
+        }
+    display: grid;
+    gap: 5%;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-areas: "block1 block1 block1"
+    "block2 block2 block5"
+    "block3 block4 block5" ;
+    @media screen and (max-width:800px) {
+        grid-template-columns: 80px 80px 80px ;
+        grid-template-rows: 100px 200px 200px;
+        grid-template-areas: "block1 block1 block1"
+        "block2 block3 block4"
+        "block5 block5 block5";
+    }
+    @media screen and (max-width:600px) {
+        grid-template-columns: repeat(2, 45%) ;
+        grid-template-rows: 100px 100px 100px 100px;
+        grid-template-areas: "block1 block1 "
+        "block2 block2"
+        "block3 block4"
+        "block5 block5";
+    }
+    .block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #e67e22;
+        &:nth-child(1){
+            grid-area: block1;
+        }
+        &:nth-child(2){
+            grid-area: block2;
+        }
+        &:nth-child(3){
+            grid-area: block3;
+        }
+        &:nth-child(4){
+            grid-area: block4;
+        }
+        &:nth-child(5){
+            grid-area: block5;
+        }
+    }
     }
     
 }
